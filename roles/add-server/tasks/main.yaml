@@ -8,7 +8,7 @@
     mode: '0644'
   when: inventory_hostname != groups['servers'][0]
 
-# Keep checking the cluster API until it's functioning (deployed)
+# Keep checking the cluster API until it's functioning (deployed
 - name: Wait for cluster API to be ready (can take 5-10 mins depending on internet/hardware)
   ansible.builtin.command:
     cmd: "kubectl get nodes"
